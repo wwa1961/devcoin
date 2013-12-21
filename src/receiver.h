@@ -589,14 +589,6 @@ string getStepText(const string& dataDirectory, const string& fileName, int heig
 			peerText += string("http://devcoin.darkgamex.ch/receiver.csv\n");
 			peerText += string("_endpeers\n");
 			stepText = getCommonOutputByText(peerText, string("0"));
-//			stepText = getLocationText("https://raw.github.com/Unthinkingbit/charity/master/receiver_0.csv");
-                        /* This is really the only place we need to create the
-                           received directory,  we could change this to
-                           explictly create it here, and remove the code the
-                           always tried to create it everytime, also we should
-                           be able to change things to not have to pass around
-                           the datadir as calls allready exist to fetch it
-                        */
 			if (getStartsWith(stepText, string("Format,pluribusunum")))
                            writeFileText(directorySubName, stepText);
 		}
@@ -604,8 +596,7 @@ string getStepText(const string& dataDirectory, const string& fileName, int heig
 		{
 			cout << "Downloading " << stepFileName << " base file." << directorySubName << endl;
 			string peerText = string("_beginpeers\n");
-			peerText += string("http://galaxies.mygamesonline.org/receiver.csv\n");
-			peerText += string("http://devcoinpool.btc-music.com/receiver/receiver.csv\n");
+			peerText += string("https://raw.github.com/sidhujag/devcoin/master/src/node2/testnet3/receiverTestNet/receiverTestNet_0.csv\n");
 			peerText += string("_endpeers\n");
 			stepText = getCommonOutputByText(peerText, string("0"));
 			if (getStartsWith(stepText, string("Format,pluribusunum")))

@@ -1,10 +1,6 @@
 Format,pluribusunum
 _beginpeers
-http://galaxies.mygamesonline.org/receiver.csv
-http://devcoinpool.btc-music.com/receiver/receiver.csv
-http://devcoinblockexplorer.info/receiver/receiver.csv
-http://devtome.com/files/receiver.csv
-http://devcoin.darkgamex.ch/receiver.csv
+https://raw.github.com/sidhujag/devcoin/master/src/node2/testnet3/receiverTestNet/receiverTestNet_0.csv
 _endpeers
 _begincoins
 mnid7N5UoqmVfZ4rUUimETHmqZz3xywuzn
