@@ -1023,7 +1023,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Unix: ~/.Devcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Devcoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "devcoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1035,10 +1035,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "Devcoin";
+    return pathRet / "devcoin";
 #else
     // Unix
-    return pathRet / ".Devcoin";
+    return pathRet / ".devcoin";
 #endif
 #endif
 }
@@ -1079,7 +1079,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "Devcoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "devcoin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1113,7 +1113,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "Devcoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "devcoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }

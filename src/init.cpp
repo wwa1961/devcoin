@@ -290,8 +290,8 @@ std::string HelpMessage()
 {
     string strUsage = _("Options:") + "\n" +
         "  -?                     " + _("This help message") + "\n" +
-        "  -conf=<file>           " + _("Specify configuration file (default: Devcoin.conf)") + "\n" +
-        "  -pid=<file>            " + _("Specify pid file (default: Devcoind.pid)") + "\n" +
+        "  -conf=<file>           " + _("Specify configuration file (default: devcoin.conf)") + "\n" +
+        "  -pid=<file>            " + _("Specify pid file (default: devcoind.pid)") + "\n" +
         "  -gen                   " + _("Generate coins (default: 0)") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +
         "  -dbcache=<n>           " + _("Set database cache size in megabytes (default: 25)") + "\n" +
