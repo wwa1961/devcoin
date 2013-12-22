@@ -1186,7 +1186,7 @@ void MapPort(bool)
 // Each pair gives a source name and a seed name.
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
-static const char *strMainNetDNSSeed[][12] = {
+static const char *strMainNetDNSSeed[][14] = {
 	{"public.txn.co.in", "dvc.public.txn.co.in"},
 	{"21stcenturymoneytalk.org", "dvc-seed.21stcenturymoneytalk.org"},
 	{"devtome.com", "dvcstable01.devtome.com"},
@@ -1195,15 +1195,19 @@ static const char *strMainNetDNSSeed[][12] = {
 	{"dvcnode.org", "dvcstable03.dvcnode.org"},
 	{"dvcnode.org", "dvcstable04.dvcnode.org"},
 	{"dvcnode.org", "dvcstable05.dvcnode.org"},
+	{"dvcnode.org", "dvcstable06.dvcnode.org"},
+	{"dvcnode.org", "dvcstable07.dvcnode.org"},
 	{"dvcnode.com", "node01.dvcnode.com"},
 	{"dvcnode.com", "node02.dvcnode.com"},
 	{"dvcnode.com", "node03.dvcnode.com"},
     {NULL, NULL}
 };
 
-static const char *strTestNetDNSSeed[][12] = {
+static const char *strTestNetDNSSeed[][14] = {
     {NULL, NULL},
     {NULL, NULL},
+	{NULL, NULL},
+	{NULL, NULL},
 	{NULL, NULL},
 	{NULL, NULL},
 	{NULL, NULL},
@@ -1218,7 +1222,7 @@ static const char *strTestNetDNSSeed[][12] = {
 
 void ThreadDNSAddressSeed()
 {
-    static const char *(*strDNSSeed)[12] = fTestNet ? strTestNetDNSSeed : strMainNetDNSSeed;
+    static const char *(*strDNSSeed)[14] = fTestNet ? strTestNetDNSSeed : strMainNetDNSSeed;
 
     int found = 0;
 
