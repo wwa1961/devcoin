@@ -1,7 +1,6 @@
 src/*.exe
-src/i0coin
-src/i0coind
-src/test_i0coin
+src/src/devcoind
+src/test_devcoin	
 .*.swp
 *.*~*
 *.bak
@@ -13,15 +12,13 @@ src/test_i0coin
 
 # Compilation and Qt preprocessor part
 *.qm
-Makefile
-bitcoin-qt
-i0coin-qt
+bitcoin-qt/devcoin-qt
 Bitcoin-Qt.app
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
-i0couin-qt_test
+bitcoin-qt_testd
+evcoin-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -33,4 +30,4 @@ qrc_*.cpp
 .DS_Store
 build
 
-!src/leveldb-*/Makefile
+!src/leveldb-*
