@@ -1406,8 +1406,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Inscriptio cui mittere pensitationem (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address to send the payment to (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)</source>
+        <translation>Inscriptio cui mittere pensitationem (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1447,8 +1447,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Insero inscriptionem Bitcoin (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Devcoin address (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)</source>
+        <translation>Insero inscriptionem Bitcoin (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)</translation>
     </message>
 </context>
 <context>
@@ -1470,8 +1470,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Inscriptio qua signare nuntium (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address to sign the message with (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)</source>
+        <translation>Inscriptio qua signare nuntium (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1543,8 +1543,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Inscriptio qua nuntius signatus est (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address the message was signed with (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)</source>
+        <translation>Inscriptio qua nuntius signatus est (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -1564,8 +1564,8 @@ Inscriptio: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Insere inscriptionem Bitcoin (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Devcoin address (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)</source>
+        <translation>Insere inscriptionem Bitcoin (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)</translation>
     </message>
     <message>
         <location line="-2"/>

@@ -24,10 +24,10 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->addressIn_SM->setPlaceholderText(tr("Enter an Devcoin address (e.g. jNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)"));
+    ui->addressIn_SM->setPlaceholderText(tr("Enter an Devcoin address (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)"));
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter an Devcoin address (e.g. jNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter an Devcoin address (e.g. 1JEnRbir5ceXZYH7HXyQZabM4LRQU7MRsx)"));
     ui->signatureIn_VM->setPlaceholderText(tr("Enter Devcoin signature"));
 #endif
 
