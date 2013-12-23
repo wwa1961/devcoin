@@ -27,17 +27,17 @@ INCLUDEPATHS= \
  -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu/boost_1_54_0" \
  -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu/db-4.8.30.NC/build_unix" \
  -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.0d/include" \
- -I"C:\newdvc\src\leveldb\include" \
- -I"C:\newdvc\src\curl\include" \
- -I"C:\newdvc\src\leveldb\helpers"
+ -I"C:\dvctest\src\leveldb\include" \
+ -I"C:\dvctest\src\curl\include" \
+ -I"C:\dvctest\src\leveldb\helpers"
  
 LIBPATHS= \
  -L"$(CURDIR)/leveldb" \
  -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/boost_1_54_0/stage/lib" \
  -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/db-4.8.30.NC/build_unix" \
  -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.0d" \
- -L"C:\newdvc\src\leveldb" \
- -L"C:\newdvc\src\curl\lib\.libs"
+ -L"C:\dvctest\src\leveldb" \
+ -L"C:\dvctest\src\curl\lib\.libs"
  
  WXLIBS= \
  -l wxmsw29ud_html -l wxmsw29ud_core -l wxmsw29ud_adv -l wxbase29ud -l wxtiffd -l wxjpegd -l wxpngd -l wxzlibd

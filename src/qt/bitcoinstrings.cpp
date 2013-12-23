@@ -142,7 +142,7 @@ QT_TRANSLATE_NOOP("devcoin-core", "Invalid amount for -mintxfee=<amount>: '%s'")
 QT_TRANSLATE_NOOP("devcoin-core", "Invalid amount for -paytxfee=<amount>: '%s'"),
 QT_TRANSLATE_NOOP("devcoin-core", "Invalid amount"),
 QT_TRANSLATE_NOOP("devcoin-core", "List commands"),
-QT_TRANSLATE_NOOP("devcoin-core", "Listen for connections on <port> (default: 8333 or testnet: 18333)"),
+QT_TRANSLATE_NOOP("devcoin-core", "Listen for connections on <port> (default: 52333 or testnet: 62333)"),
 QT_TRANSLATE_NOOP("devcoin-core", "Loading addresses..."),
 QT_TRANSLATE_NOOP("devcoin-core", "Loading block index..."),
 QT_TRANSLATE_NOOP("devcoin-core", "Loading wallet..."),

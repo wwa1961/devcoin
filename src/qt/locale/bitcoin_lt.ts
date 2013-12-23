@@ -2235,8 +2235,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 8333 or testnet: 18333)</source>
-        <translation>Sujungimo klausymas prijungčiai  &lt;port&gt; (pagal nutylėjimą: 8333 arba testnet: 18333)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 52333 or testnet: 62333)</source>
+        <translation>Sujungimo klausymas prijungčiai  &lt;port&gt; (pagal nutylėjimą: 52333 arba testnet: 62333)</translation>
     </message>
     <message>
         <location line="+5"/>
