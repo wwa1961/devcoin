@@ -6,7 +6,7 @@ src/test_devcoin
 *.bak
 *.rej
 *.orig
-*.o
+
 *.patch
 .bitcoin
 
