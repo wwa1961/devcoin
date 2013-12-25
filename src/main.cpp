@@ -599,22 +599,22 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
     unsigned int nNewBlockSize = nBlockSize + nBytes;
     int64 nMinFee = (1 + (int64)nBytes / 1000) * nBaseFee;
 
-    //if (fAllowFree)
-    //{
-    //    if (nBlockSize == 1)
-    //    {
-    //        // Transactions under 10K are free
-    //        // (about 4500 BTC if made of 50 BTC inputs)
-    //        if (nBytes < 10000)
-    //            nMinFee = 0;
-    //    }
-    //    else
-    //    {
-    //        // Free transaction area
-    //        if (nNewBlockSize < 27000)
-    //            nMinFee = 0;
-    //    }
-    //}
+    if (fAllowFree)
+    {
+        if (nBlockSize == 1)
+        {
+            // Transactions under 10K are free
+            // (about 4500 BTC if made of 50 BTC inputs)
+            if (nBytes < 10000)
+                nMinFee = 0;
+        }
+        else
+        {
+            // Free transaction area
+            if (nNewBlockSize < 27000)
+                nMinFee = 0;
+        }
+    }
 
     // To limit dust spam, require base fee if any output is less than 0.01
     //if (nMinFee < nBaseFee)
