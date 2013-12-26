@@ -17,13 +17,14 @@
 
 CXX ?= g++
 
-USE_UPNP:=-
+USE_UPNP:=1
 USE_IPV6:=1
 
 BOOST_SUFFIX?=-mgw48-mt-sd-1_54
 
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
+ -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu" \
  -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu/boost_1_54_0" \
  -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu/db-4.8.30.NC/build_unix" \
  -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.0d/include" \
@@ -33,6 +34,7 @@ INCLUDEPATHS= \
  
 LIBPATHS= \
  -L"$(CURDIR)/leveldb" \
+ -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/miniupnpc" \
  -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/boost_1_54_0/stage/lib" \
  -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/db-4.8.30.NC/build_unix" \
  -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.0d" \
