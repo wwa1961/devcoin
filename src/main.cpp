@@ -370,7 +370,7 @@ bool CTxOut::IsDust() const
     // need a CTxIn of at least 148 bytes to spend,
     // so dust is a txout less than 54 uBTC
     // (5430 satoshis) with default nMinRelayTxFee
-    return ((nValue*1000*1000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < CTransaction::nMinRelayTxFee);
+    return ((nValue*1000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < CTransaction::nMinRelayTxFee);
 }
 
 bool CTransaction::IsStandard() const
@@ -623,9 +623,9 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
     //        if (txout.nValue < CENT)
     //            nMinFee = nBaseFee;
     //}
-    // DEVCOIN: To limit dust spam, require an additional one tenth of CTransaction::nMinTxFee/CTransaction::nMinRelayTxFee for each output
-    //BOOST_FOREACH(const CTxOut& txout, vout)
-       //  nMinFee += nBaseFee / 10;
+    // DEVCOIN: To limit dust spam, require an additional one half of CTransaction::nMinTxFee/CTransaction::nMinRelayTxFee for each output
+    BOOST_FOREACH(const CTxOut& txout, vout)
+         nMinFee += nBaseFee / 2;
 
     // Raise the price as the block approaches full
     if (nBlockSize != 1 && nNewBlockSize >= MAX_BLOCK_SIZE_GEN/2)
