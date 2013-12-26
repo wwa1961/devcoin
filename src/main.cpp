@@ -50,10 +50,10 @@ bool fBenchmark = false;
 bool fTxIndex = false;
 unsigned int nCoinCacheSize = 5000;
 
-/** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
-int64 CTransaction::nMinTxFee = 5*COIN;  // Override with -mintxfee
+/** bitcoin (10000) * 1000(COIN) for 1000x more fees in devcoin */
+int64 CTransaction::nMinTxFee = COIN;  // Override with -mintxfee
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
-int64 CTransaction::nMinRelayTxFee = 5*COIN;
+int64 CTransaction::nMinRelayTxFee = COIN;
 
 CMedianFilter<int> cPeerBlockCounts(8, 0); // Amount of blocks that other nodes claim to have
 
@@ -370,7 +370,7 @@ bool CTxOut::IsDust() const
     // need a CTxIn of at least 148 bytes to spend,
     // so dust is a txout less than 54 uBTC
     // (5430 satoshis) with default nMinRelayTxFee
-    return ((nValue*1000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < CTransaction::nMinRelayTxFee);
+    return ((nValue*1000*1000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < CTransaction::nMinRelayTxFee);
 }
 
 bool CTransaction::IsStandard() const
@@ -624,8 +624,8 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
     //            nMinFee = nBaseFee;
     //}
     // DEVCOIN: To limit dust spam, require an additional one tenth of CTransaction::nMinTxFee/CTransaction::nMinRelayTxFee for each output
-    BOOST_FOREACH(const CTxOut& txout, vout)
-         nMinFee += nBaseFee / 10;
+    //BOOST_FOREACH(const CTxOut& txout, vout)
+       //  nMinFee += nBaseFee / 10;
 
     // Raise the price as the block approaches full
     if (nBlockSize != 1 && nNewBlockSize >= MAX_BLOCK_SIZE_GEN/2)
