@@ -1674,9 +1674,9 @@ bool CBlock::ConnectBlock(CValidationState &state, CBlockIndex* pindex, CCoinsVi
     //
     // This rule applies to all Bitcoin blocks whose timestamp is after March 15, 2012, 0:00 UTC.
     //
-    // BIP30 for Devcoin will go into effect on 2013-09-01 0:00 UTC 
-    // date -d "2013-09-01 0:00 UTC" +"%s"
-    int64 nBIP30SwitchTime = 1377993600;
+    // BIP30 for Devcoin will go into effect on March 15, 2012 0:00 UTC 
+    // date -d "2012-03-15 0:00 UTC" +"%s"
+    int64 nBIP30SwitchTime = 1331769600;
     bool fEnforceBIP30 = (pindex->nTime > nBIP30SwitchTime);
 
     // after BIP30 is enabled for some time, we could make the same change
@@ -4599,7 +4599,7 @@ CBlockTemplate* CreateNewBlock(CReserveKey& reservekey)
         nLastBlockSize = nBlockSize;
         //pblock->vtx[0].vout[0].nValue = GetBlockValue(pindexPrev->nHeight+1, nFees);
 		// DEVCOIN
-		pblock->vtx[0].vout[0].nValue = minerValue + nFees;
+		txNew.vout[0].nValue = minerValue + nFees;
         pblocktemplate->vTxFees[0] = -nFees;
 		
         // Fill in header
