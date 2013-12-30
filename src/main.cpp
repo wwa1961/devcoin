@@ -50,10 +50,10 @@ bool fBenchmark = false;
 bool fTxIndex = false;
 unsigned int nCoinCacheSize = 5000;
 
-/** bitcoin (10000) * 1000(COIN) for 1000x more fees in devcoin */
-int64 CTransaction::nMinTxFee = COIN;  // Override with -mintxfee
+/** bitcoin (10000) * 1000(COIN) * 5 for 5000x more fees in devcoin */
+int64 CTransaction::nMinTxFee = 5*COIN;  // Override with -mintxfee
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
-int64 CTransaction::nMinRelayTxFee = COIN;
+int64 CTransaction::nMinRelayTxFee = 5*COIN;
 
 CMedianFilter<int> cPeerBlockCounts(8, 0); // Amount of blocks that other nodes claim to have
 
@@ -79,8 +79,8 @@ static const int64 initialSubsidy = 50000*COIN ;
 static const int64 share = roundint64(initialSubsidy * 0.9);
 static const int64 fallbackReduction = roundint64((initialSubsidy + share) / 2);
 static const int step = 4000;
-const std::string recieverCSV = string("receiver.csv");
-const std::string recieverCSVTestNet = string("receiverTestNet.csv");
+const std::string receiverCSV = string("receiver.csv");
+const std::string receiverCSVTestNet = string("receiverTestNet.csv");
 //////////////////////////////////////////////////////////////////////////////
 //
 // dispatching functions
@@ -370,7 +370,7 @@ bool CTxOut::IsDust() const
     // need a CTxIn of at least 148 bytes to spend,
     // so dust is a txout less than 54 uBTC
     // (5430 satoshis) with default nMinRelayTxFee
-    return ((nValue*1000*1000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < CTransaction::nMinRelayTxFee);
+    return ((nValue*1000*5000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < CTransaction::nMinRelayTxFee);
 }
 
 bool CTransaction::IsStandard() const
@@ -1781,16 +1781,16 @@ bool CBlock::ConnectBlock(CValidationState &state, CBlockIndex* pindex, CCoinsVi
 				}
 			}
         }
-	std::string recieverFile;
+	std::string receiverFile;
 	if(fTestNet == true)
 	{
-		recieverFile = recieverCSVTestNet;
+		receiverFile = receiverCSVTestNet;
 	}
 	else
 	{
-		recieverFile = recieverCSV;
+		receiverFile = receiverCSV;
 	}
-	if (!getIsSufficientAmount(addressStrings, amounts, GetDataDir().string(), recieverFile, (int)pindex->nHeight, share, step))
+	if (!getIsSufficientAmount(addressStrings, amounts, GetDataDir().string(), receiverFile, (int)pindex->nHeight, share, step))
             return error("ConnectBlock() : Share to beneficiary is insufficient");
     }
 	
@@ -4346,16 +4346,16 @@ CBlockTemplate* CreateNewBlock(CReserveKey& reservekey)
         return NULL;
 
 	// DEVCOIN
-	std::string recieverFile;
+	std::string receiverFile;
 	if(fTestNet == true)
 	{
-		recieverFile = recieverCSVTestNet;
+		receiverFile = receiverCSVTestNet;
 	}
 	else
 	{
-		recieverFile = recieverCSV;
+		receiverFile = receiverCSV;
 	}
-    vector<string> coinAddressStrings = getCoinAddressStrings(GetDataDir().string(), recieverFile, (int)pindexPrev->nHeight+1, step);
+    vector<string> coinAddressStrings = getCoinAddressStrings(GetDataDir().string(), receiverFile, (int)pindexPrev->nHeight+1, step);
     txNew.vout.resize(coinAddressStrings.size() + 1);
     txNew.vout[0].scriptPubKey << pubkey << OP_CHECKSIG;
 	

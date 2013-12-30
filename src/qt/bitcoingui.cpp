@@ -214,7 +214,7 @@ void BitcoinGUI::createActions()
     aboutAction = new QAction(QIcon(":/icons/devcoin"), tr("&About Devcoin"), this);
     aboutAction->setStatusTip(tr("Show information about Devcoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
-    aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
+    aboutQtAction = new QAction(QIcon(":/icons//qtlogo"), tr("About &Qt"), this);
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
