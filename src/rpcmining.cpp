@@ -596,9 +596,9 @@ Value getauxblock(const Array& params, bool fHelp)
             // Push OP_2 just in case we want versioning later
             pblock->vtx[0].vin[0].scriptSig = CScript() << pblock->nBits << CBigNum(1) << OP_2;
             pblock->hashMerkleRoot = pblock->BuildMerkleTree();
-
+			CAuxPow *blockAuxPow = new CAuxPow();
             // Sets the version
-            pblock->SetAuxPow(new CAuxPow());
+            pblock->SetAuxPow(blockAuxPow);
 
             // Save
             mapNewBlock[pblock->GetHash()] = pblock;

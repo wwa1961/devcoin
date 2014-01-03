@@ -69,7 +69,8 @@ int ReadWriteAuxPow(Stream& s, boost::shared_ptr<CAuxPow>& auxpow, int nType, in
 {
     if (nVersion & BLOCK_VERSION_AUXPOW)
     {
-        auxpow.reset(new CAuxPow());
+		CAuxPow* newPow = new CAuxPow();
+        auxpow.reset(newPow);
         return SerReadWrite(s, *auxpow, nType, nVersion, ser_action);
     }
     else
