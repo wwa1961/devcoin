@@ -20,7 +20,7 @@ CXX ?= g++
 USE_UPNP:=1
 USE_IPV6:=1
 
-BOOST_SUFFIX?=-mgw48-mt-sd-1_54
+BOOST_SUFFIX?=-mgw48-mt-s-1_54
 
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
@@ -57,7 +57,7 @@ LIBS= \
  -l crypto \
  -l curl
 
-DEFS=-DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE -static
+DEFS=-DNDEBUG -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE -D_THREAD_SAFE -static
 DEBUGFLAGS=-g
 CFLAGS=-mthreads -O2 -w -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter $(DEBUGFLAGS) $(DEFS) $(INCLUDEPATHS)
 # enable: ASLR, DEP and large address aware

@@ -47,25 +47,24 @@ controversial.
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable.
 
-Testing
+Building
 -------
 
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test. Please be patient and help out, and
-remember this is a security-critical project where any mistake might cost people
-lots of money.
+The daemon code is in `src/`. To compile and run for win32:
 
-### Automated Testing
+    cd src; make -f makefile.mingw devcoind.exe
+    strip devcoind.exe
 
-Developers are strongly encouraged to write unit tests for new code, and to
-submit new unit tests for old code.
+To rebuild:
+	make -f makefile.mingw clean
+	make -f makefile.mingw devcoind.exe
+	strip devcoind.exe
 
-Unit tests for the core code are in `src/test/`. To compile and run them:
+The QT code is in 'src/qt'. To compile and run the GUI for win32 (with features UPNP and QRCODE enabled):
 
-    cd src; make -f makefile.unix test
+    qmake USE_QRCODE=1 bitcoin-qt.pro
+    make -f Makefile.release
+    
+    The executable should be in the .\release directory.
 
-Unit tests for the GUI code are in `src/qt/test/`. To compile and run them:
-
-    qmake BITCOIN_QT_TEST=1 -o Makefile.test bitcoin-qt.pro
-    make -f Makefile.test
-    ./bitcoin-qt_test
+If you are trying to build for other platforms please use the makefile.mingw as a base as this is the one that is tested, all compiler links and preprocessor define's are in this file and need to be ported over to other platform makefile's if they should be.	
