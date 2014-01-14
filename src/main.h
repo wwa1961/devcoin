@@ -1329,6 +1329,7 @@ public:
         nTime = 0;
         nBits = 0;
         nNonce = 0;
+		auxpow.reset();
     }
 
     bool IsNull() const
@@ -1384,6 +1385,7 @@ public:
     (
         READWRITE(*(CBlockHeader*)this);
         READWRITE(vtx);
+
     )
 
     void SetNull()
@@ -1402,6 +1404,7 @@ public:
         block.nTime          = nTime;
         block.nBits          = nBits;
         block.nNonce         = nNonce;
+		block.auxpow         = auxpow;
         return block;
     }
 
@@ -1874,7 +1877,7 @@ public:
         auxpow.reset();
     }
 
-    explicit CDiskBlockIndex(CBlockIndex* pindex, boost::shared_ptr<CAuxPow> auxpow) : CBlockIndex(*pindex) {
+    explicit CDiskBlockIndex(CBlockIndex* pindex, boost::shared_ptr<CAuxPow> &auxpow) : CBlockIndex(*pindex) {
         hashPrev = (pprev ? pprev->GetBlockHash() : 0);
         this->auxpow = auxpow;
     }

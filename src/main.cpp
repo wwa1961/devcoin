@@ -3575,28 +3575,22 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
 
     else if (strCommand == "getdata")
     {
-		try
-		{
-			vector<CInv> vInv;
-			vRecv >> vInv;
-			if (vInv.size() > MAX_INV_SZ)
-			{
-				pfrom->Misbehaving(20);
-				return error("message getdata size() = %"PRIszu"", vInv.size());
-			}
+        vector<CInv> vInv;
+        vRecv >> vInv;
+        if (vInv.size() > MAX_INV_SZ)
+        {
+            pfrom->Misbehaving(20);
+            return error("message getdata size() = %"PRIszu"", vInv.size());
+        }
 
-			if (fDebugNet || (vInv.size() != 1))
-				printf("received getdata (%"PRIszu" invsz)\n", vInv.size());
+        if (fDebugNet || (vInv.size() != 1))
+            printf("received getdata (%"PRIszu" invsz)\n", vInv.size());
 
-			if ((fDebugNet && vInv.size() > 0) || (vInv.size() == 1))
-				printf("received getdata for: %s\n", vInv[0].ToString().c_str());
+        if ((fDebugNet && vInv.size() > 0) || (vInv.size() == 1))
+            printf("received getdata for: %s\n", vInv[0].ToString().c_str());
 
-			pfrom->vRecvGetData.insert(pfrom->vRecvGetData.end(), vInv.begin(), vInv.end());
-			ProcessGetData(pfrom);
-		}
-		catch (std::exception &e) {
-			printf("Exception in getdata");
-		}
+        pfrom->vRecvGetData.insert(pfrom->vRecvGetData.end(), vInv.begin(), vInv.end());
+        ProcessGetData(pfrom);
     }
 
 
@@ -3604,39 +3598,33 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
     {
         CBlockLocator locator;
         uint256 hashStop;
-		try
-		{
-			vRecv >> locator >> hashStop;
+        vRecv >> locator >> hashStop;
 
-			// Find the last block the caller has in the main chain
-			CBlockIndex* pindex = locator.GetBlockIndex();
+        // Find the last block the caller has in the main chain
+        CBlockIndex* pindex = locator.GetBlockIndex();
 
-			// Send the rest of the chain
-			if (pindex)
-				pindex = pindex->pnext;
-			int nLimit = 500;
-			printf("getblocks %d to %s limit %d\n", (pindex ? pindex->nHeight : -1), hashStop.ToString().c_str(), nLimit);
-			for (; pindex; pindex = pindex->pnext)
-			{
-				if (pindex->GetBlockHash() == hashStop)
-				{
-					printf("  getblocks stopping at %d %s\n", pindex->nHeight, pindex->GetBlockHash().ToString().c_str());
-					break;
-				}
-				pfrom->PushInventory(CInv(MSG_BLOCK, pindex->GetBlockHash()));
-				if (--nLimit <= 0)
-				{
-					// When this block is requested, we'll send an inv that'll make them
-					// getblocks the next batch of inventory.
-					printf("  getblocks stopping at limit %d %s\n", pindex->nHeight, pindex->GetBlockHash().ToString().c_str());
-					pfrom->hashContinue = pindex->GetBlockHash();
-					break;
-				}
-			}
-		}
-		catch (std::exception &e) {
-			printf("Exception in getblocks");
-		}
+        // Send the rest of the chain
+        if (pindex)
+            pindex = pindex->pnext;
+        int nLimit = 500;
+        printf("getblocks %d to %s limit %d\n", (pindex ? pindex->nHeight : -1), hashStop.ToString().c_str(), nLimit);
+        for (; pindex; pindex = pindex->pnext)
+        {
+            if (pindex->GetBlockHash() == hashStop)
+            {
+                printf("  getblocks stopping at %d %s\n", pindex->nHeight, pindex->GetBlockHash().ToString().c_str());
+                break;
+            }
+            pfrom->PushInventory(CInv(MSG_BLOCK, pindex->GetBlockHash()));
+            if (--nLimit <= 0)
+            {
+                // When this block is requested, we'll send an inv that'll make them
+                // getblocks the next batch of inventory.
+                printf("  getblocks stopping at limit %d %s\n", pindex->nHeight, pindex->GetBlockHash().ToString().c_str());
+                pfrom->hashContinue = pindex->GetBlockHash();
+                break;
+            }
+        }
     }
 
 
@@ -3644,42 +3632,36 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
     {
         CBlockLocator locator;
         uint256 hashStop;
-		try
-		{
-			vRecv >> locator >> hashStop;
+        vRecv >> locator >> hashStop;
 
-			CBlockIndex* pindex = NULL;
-			if (locator.IsNull())
-			{
-				// If locator is null, return the hashStop block
-				map<uint256, CBlockIndex*>::iterator mi = mapBlockIndex.find(hashStop);
-				if (mi == mapBlockIndex.end())
-					return true;
-				pindex = (*mi).second;
-			}
-			else
-			{
-				// Find the last block the caller has in the main chain
-				pindex = locator.GetBlockIndex();
-				if (pindex)
-					pindex = pindex->pnext;
-			}
+        CBlockIndex* pindex = NULL;
+        if (locator.IsNull())
+        {
+            // If locator is null, return the hashStop block
+            map<uint256, CBlockIndex*>::iterator mi = mapBlockIndex.find(hashStop);
+            if (mi == mapBlockIndex.end())
+                return true;
+            pindex = (*mi).second;
+        }
+        else
+        {
+            // Find the last block the caller has in the main chain
+            pindex = locator.GetBlockIndex();
+            if (pindex)
+                pindex = pindex->pnext;
+        }
 
-			// we must use CBlocks, as CBlockHeaders won't include the 0x00 nTx count at the end
-			vector<CBlock> vHeaders;
-			int nLimit = 2000;
-			printf("getheaders %d to %s\n", (pindex ? pindex->nHeight : -1), hashStop.ToString().c_str());
-			for (; pindex; pindex = pindex->pnext)
-			{
-				vHeaders.push_back(pindex->GetBlockHeader());
-				if (--nLimit <= 0 || pindex->GetBlockHash() == hashStop)
-					break;
-			}
-			pfrom->PushMessage("headers", vHeaders);
-		}
-		catch (std::exception &e) {
-			printf("Exception in getheaders");
-		}
+        // we must use CBlocks, as CBlockHeaders won't include the 0x00 nTx count at the end
+        vector<CBlock> vHeaders;
+        int nLimit = 2000;
+        printf("getheaders %d to %s\n", (pindex ? pindex->nHeight : -1), hashStop.ToString().c_str());
+        for (; pindex; pindex = pindex->pnext)
+        {
+            vHeaders.push_back(pindex->GetBlockHeader());
+            if (--nLimit <= 0 || pindex->GetBlockHash() == hashStop)
+                break;
+        }
+        pfrom->PushMessage("headers", vHeaders);
     }
 
 
