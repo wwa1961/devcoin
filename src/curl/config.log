@@ -48,6 +48,9 @@ PATH: /c/Windows/System32/WindowsPowerShell/v1.0/
 PATH: /c/MinGW/bin
 PATH: /c/Program Files (x86)/Intel/OpenCL SDK/3.0/bin/x86
 PATH: /c/Program Files (x86)/Intel/OpenCL SDK/3.0/bin/x64
+PATH: /c/Qt/5.2/qtbase/bin
+PATH: /c/Python27
+PATH: /c/apache-maven-3.1.1/bin
 PATH: /c/Program Files (x86)/Nmap
 
 
@@ -1144,7 +1147,7 @@ configure: failed program was:
 configure:19038: result: no
 configure:19042: checking for gethostbyname
 configure:19042: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccuSqHts.o:conftest.c:(.text.startup+0xc): undefined reference to `gethostbyname'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccEIxkTg.o:conftest.c:(.text.startup+0xc): undefined reference to `gethostbyname'
 collect2.exe: error: ld returned 1 exit status
 configure:19042: $? = 1
 configure: failed program was:
@@ -30445,7 +30448,7 @@ configure:28765: checking if closesocket might be used
 configure:28771: result: yes
 configure:28792: checking if CloseSocket can be linked
 configure:28811: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccC6qbHT.o:conftest.c:(.text.startup+0x16): undefined reference to `CloseSocket'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccgIRha9.o:conftest.c:(.text.startup+0x16): undefined reference to `CloseSocket'
 collect2.exe: error: ld returned 1 exit status
 configure:28811: $? = 1
 configure: failed program was:
@@ -30651,7 +30654,7 @@ configure:29085: checking for fcntl.h
 configure:29085: result: yes
 configure:29104: checking if fcntl can be linked
 configure:29133: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccvOWqik.o:conftest.c:(.text.startup+0xc): undefined reference to `fcntl'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccMoFsnH.o:conftest.c:(.text.startup+0xc): undefined reference to `fcntl'
 collect2.exe: error: ld returned 1 exit status
 configure:29133: $? = 1
 configure: failed program was:
@@ -31079,7 +31082,7 @@ configure: failed program was:
 configure:29687: result: no
 configure:29706: checking if freeifaddrs can be linked
 configure:29735: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccykAfTm.o:conftest.c:(.text.startup+0xc): undefined reference to `freeifaddrs'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccOB2KDS.o:conftest.c:(.text.startup+0xc): undefined reference to `freeifaddrs'
 collect2.exe: error: ld returned 1 exit status
 configure:29735: $? = 1
 configure: failed program was:
@@ -31466,7 +31469,7 @@ configure: failed program was:
 configure:29860: result: no
 configure:29880: checking if fsetxattr can be linked
 configure:29909: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cchghaHk.o:conftest.c:(.text.startup+0xc): undefined reference to `fsetxattr'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccIIirZb.o:conftest.c:(.text.startup+0xc): undefined reference to `fsetxattr'
 collect2.exe: error: ld returned 1 exit status
 configure:29909: $? = 1
 configure: failed program was:
@@ -31947,7 +31950,7 @@ configure:30444: checking if getaddrinfo might be used
 configure:30460: result: no
 configure:30644: checking if gai_strerror can be linked
 configure:30664: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccCFc87i.o:conftest.c:(.text.startup+0x16): undefined reference to `gai_strerror'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccFPnFya.o:conftest.c:(.text.startup+0x16): undefined reference to `gai_strerror'
 collect2.exe: error: ld returned 1 exit status
 configure:30664: $? = 1
 configure: failed program was:
@@ -32176,7 +32179,7 @@ configure:30901: checking if gethostbyaddr might be used
 configure:30907: result: yes
 configure:30929: checking if gethostbyaddr_r can be linked
 configure:30958: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cca3qZYB.o:conftest.c:(.text.startup+0xc): undefined reference to `gethostbyaddr_r'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccs8DRm2.o:conftest.c:(.text.startup+0xc): undefined reference to `gethostbyaddr_r'
 collect2.exe: error: ld returned 1 exit status
 configure:30958: $? = 1
 configure: failed program was:
@@ -32394,7 +32397,7 @@ configure:31292: checking if gethostbyname might be used
 configure:31298: result: yes
 configure:31320: checking if gethostbyname_r can be linked
 configure:31349: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccy8phJ7.o:conftest.c:(.text.startup+0xc): undefined reference to `gethostbyname_r'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccyRStYc.o:conftest.c:(.text.startup+0xc): undefined reference to `gethostbyname_r'
 collect2.exe: error: ld returned 1 exit status
 configure:31349: $? = 1
 configure: failed program was:
@@ -32620,7 +32623,7 @@ configure:31730: checking if gethostname might be used
 configure:31736: result: yes
 configure:31758: checking if getifaddrs can be linked
 configure:31787: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccvutkSh.o:conftest.c:(.text.startup+0xc): undefined reference to `getifaddrs'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc1sATgj.o:conftest.c:(.text.startup+0xc): undefined reference to `getifaddrs'
 collect2.exe: error: ld returned 1 exit status
 configure:31787: $? = 1
 configure: failed program was:
@@ -32827,7 +32830,7 @@ configure:31934: checking if getifaddrs might be used
 configure:31950: result: no
 configure:31963: checking if getservbyport_r can be linked
 configure:31992: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccqJkyFn.o:conftest.c:(.text.startup+0xc): undefined reference to `getservbyport_r'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccePw58S.o:conftest.c:(.text.startup+0xc): undefined reference to `getservbyport_r'
 collect2.exe: error: ld returned 1 exit status
 configure:31992: $? = 1
 configure: failed program was:
@@ -33040,7 +33043,7 @@ configure:32223: checking for time.h
 configure:32223: result: yes
 configure:32243: checking if gmtime_r can be linked
 configure:32272: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc4Ygkip.o:conftest.c:(.text.startup+0xc): undefined reference to `gmtime_r'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccOjGfkm.o:conftest.c:(.text.startup+0xc): undefined reference to `gmtime_r'
 collect2.exe: error: ld returned 1 exit status
 configure:32272: $? = 1
 configure: failed program was:
@@ -33258,7 +33261,7 @@ configure:32459: checking for arpa/inet.h
 configure:32459: result: no
 configure:32479: checking if inet_ntoa_r can be linked
 configure:32508: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccskIun7.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_ntoa_r'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cckew76u.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_ntoa_r'
 collect2.exe: error: ld returned 1 exit status
 configure:32508: $? = 1
 configure: failed program was:
@@ -33469,7 +33472,7 @@ configure:32651: checking if inet_ntoa_r might be used
 configure:32677: result: no
 configure:32690: checking if inet_ntop can be linked
 configure:32719: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccCnZECf.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_ntop'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cccaOMEg.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_ntop'
 collect2.exe: error: ld returned 1 exit status
 configure:32719: $? = 1
 configure: failed program was:
@@ -33680,7 +33683,7 @@ configure:32908: checking if inet_ntop might be used
 configure:32924: result: no
 configure:32937: checking if inet_pton can be linked
 configure:32966: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc6969J9.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_pton'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cckxi0nN.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_pton'
 collect2.exe: error: ld returned 1 exit status
 configure:32966: $? = 1
 configure: failed program was:
@@ -34107,7 +34110,7 @@ configure: failed program was:
 configure:33191: result: no
 configure:33210: checking if ioctl can be linked
 configure:33239: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccwWfl2W.o:conftest.c:(.text.startup+0xc): undefined reference to `ioctl'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc4fJKQr.o:conftest.c:(.text.startup+0xc): undefined reference to `ioctl'
 collect2.exe: error: ld returned 1 exit status
 configure:33239: $? = 1
 configure: failed program was:
@@ -34350,7 +34353,7 @@ configure:33690: checking if ioctlsocket FIONBIO might be used
 configure:33694: result: yes
 configure:33721: checking if IoctlSocket can be linked
 configure:33750: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cccibyYb.o:conftest.c:(.text.startup+0xc): undefined reference to `IoctlSocket'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccwlwvZO.o:conftest.c:(.text.startup+0xc): undefined reference to `IoctlSocket'
 collect2.exe: error: ld returned 1 exit status
 configure:33750: $? = 1
 configure: failed program was:
@@ -34565,7 +34568,7 @@ configure:33843: checking if IoctlSocket might be used
 configure:33932: result: no
 configure:33945: checking if localtime_r can be linked
 configure:33974: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccqAVRQ5.o:conftest.c:(.text.startup+0xc): undefined reference to `localtime_r'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccOVeXml.o:conftest.c:(.text.startup+0xc): undefined reference to `localtime_r'
 collect2.exe: error: ld returned 1 exit status
 configure:33974: $? = 1
 configure: failed program was:
@@ -34780,7 +34783,7 @@ configure:34121: checking if localtime_r might be used
 configure:34137: result: no
 configure:34150: checking if memrchr can be linked
 configure:34179: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccWumhns.o:conftest.c:(.text.startup+0xc): undefined reference to `memrchr'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccUSdmx6.o:conftest.c:(.text.startup+0xc): undefined reference to `memrchr'
 collect2.exe: error: ld returned 1 exit status
 configure:34179: $? = 1
 configure: failed program was:
@@ -34993,7 +34996,7 @@ configure: failed program was:
 configure:34187: result: no
 configure:34196: checking if memrchr seems a macro
 configure:34215: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cciNYcyc.o:conftest.c:(.text.startup+0x26): undefined reference to `memrchr'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccU7jIDB.o:conftest.c:(.text.startup+0x26): undefined reference to `memrchr'
 collect2.exe: error: ld returned 1 exit status
 configure:34215: $? = 1
 configure: failed program was:
@@ -35208,7 +35211,7 @@ configure:34310: checking if memrchr might be used
 configure:34325: result: no
 configure:34344: checking if poll can be linked
 configure:34363: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccaDD9Qr.o:conftest.c:(.text.startup+0x26): undefined reference to `poll'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc0xStD8.o:conftest.c:(.text.startup+0x26): undefined reference to `poll'
 collect2.exe: error: ld returned 1 exit status
 configure:34363: $? = 1
 configure: failed program was:
@@ -35672,7 +35675,7 @@ configure:34761: checking for signal.h
 configure:34761: result: yes
 configure:34780: checking if sigaction can be linked
 configure:34809: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc0qPZE6.o:conftest.c:(.text.startup+0xc): undefined reference to `sigaction'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccI431Ar.o:conftest.c:(.text.startup+0xc): undefined reference to `sigaction'
 collect2.exe: error: ld returned 1 exit status
 configure:34809: $? = 1
 configure: failed program was:
@@ -35890,7 +35893,7 @@ configure:34902: checking if sigaction might be used
 configure:34917: result: no
 configure:34929: checking if siginterrupt can be linked
 configure:34958: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccYVdYpe.o:conftest.c:(.text.startup+0xc): undefined reference to `siginterrupt'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccIQWTCj.o:conftest.c:(.text.startup+0xc): undefined reference to `siginterrupt'
 collect2.exe: error: ld returned 1 exit status
 configure:34958: $? = 1
 configure: failed program was:
@@ -36126,7 +36129,7 @@ configure:35233: checking for setjmp.h
 configure:35233: result: yes
 configure:35253: checking if sigsetjmp can be linked
 configure:35282: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccwt7bXg.o:conftest.c:(.text.startup+0xc): undefined reference to `sigsetjmp'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccMNzOCv.o:conftest.c:(.text.startup+0xc): undefined reference to `sigsetjmp'
 collect2.exe: error: ld returned 1 exit status
 configure:35282: $? = 1
 configure: failed program was:
@@ -36580,7 +36583,7 @@ configure:35560: checking if socket might be used
 configure:35566: result: yes
 configure:35587: checking if socketpair can be linked
 configure:35616: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccekoFFg.o:conftest.c:(.text.startup+0xc): undefined reference to `socketpair'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccOHlMeZ.o:conftest.c:(.text.startup+0xc): undefined reference to `socketpair'
 collect2.exe: error: ld returned 1 exit status
 configure:35616: $? = 1
 configure: failed program was:
@@ -36850,7 +36853,7 @@ configure:36159: checking if strdup might be used
 configure:36165: result: yes
 configure:36192: checking if strerror_r can be linked
 configure:36221: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cckKvjVv.o:conftest.c:(.text.startup+0xc): undefined reference to `strerror_r'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cci4rZ03.o:conftest.c:(.text.startup+0xc): undefined reference to `strerror_r'
 collect2.exe: error: ld returned 1 exit status
 configure:36221: $? = 1
 configure: failed program was:
@@ -37106,7 +37109,7 @@ configure:36869: checking if strncasecmp might be used
 configure:36875: result: yes
 configure:36896: checking if strncmpi can be linked
 configure:36925: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccIcveXX.o:conftest.c:(.text.startup+0xc): undefined reference to `strncmpi'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cciinHuK.o:conftest.c:(.text.startup+0xc): undefined reference to `strncmpi'
 collect2.exe: error: ld returned 1 exit status
 configure:36925: $? = 1
 configure: failed program was:
@@ -37589,7 +37592,7 @@ configure:37316: checking if strstr might be used
 configure:37322: result: yes
 configure:37343: checking if strtok_r can be linked
 configure:37372: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccGE9EEj.o:conftest.c:(.text.startup+0xc): undefined reference to `strtok_r'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccu1WOn6.o:conftest.c:(.text.startup+0xc): undefined reference to `strtok_r'
 collect2.exe: error: ld returned 1 exit status
 configure:37372: $? = 1
 configure: failed program was:
@@ -37835,7 +37838,7 @@ configure:37647: checking for sys/uio.h
 configure:37647: result: no
 configure:37666: checking if writev can be linked
 configure:37695: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccCf44tx.o:conftest.c:(.text.startup+0xc): undefined reference to `writev'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccum9A7P.o:conftest.c:(.text.startup+0xc): undefined reference to `writev'
 collect2.exe: error: ld returned 1 exit status
 configure:37695: $? = 1
 configure: failed program was:
@@ -38068,7 +38071,7 @@ configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_
 conftest.c:209:6: warning: conflicting types for built-in function 'fork' [enabled by default]
  char fork ();
       ^
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccyMeJNu.o:conftest.c:(.text.startup+0xc): undefined reference to `fork'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccGFs5pB.o:conftest.c:(.text.startup+0xc): undefined reference to `fork'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -38294,7 +38297,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for fork
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccasA6dw.o:conftest.c:(.text.startup+0xc): undefined reference to `fork'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccS50VFk.o:conftest.c:(.text.startup+0xc): undefined reference to `fork'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -38510,7 +38513,7 @@ configure: failed program was:
 configure:37879: result: but still no
 configure:37837: checking for geteuid
 configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc0jfkEu.o:conftest.c:(.text.startup+0xc): undefined reference to `geteuid'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc2hXXwj.o:conftest.c:(.text.startup+0xc): undefined reference to `geteuid'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -38736,7 +38739,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for geteuid
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccsgIjIv.o:conftest.c:(.text.startup+0xc): undefined reference to `geteuid'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccC1nORJ.o:conftest.c:(.text.startup+0xc): undefined reference to `geteuid'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -38952,7 +38955,7 @@ configure: failed program was:
 configure:37879: result: but still no
 configure:37837: checking for getpass_r
 configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc6lHmTs.o:conftest.c:(.text.startup+0xc): undefined reference to `getpass_r'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccK8VLBw.o:conftest.c:(.text.startup+0xc): undefined reference to `getpass_r'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -39178,7 +39181,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for getpass_r
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccMlOmvv.o:conftest.c:(.text.startup+0xc): undefined reference to `getpass_r'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccou9dd0.o:conftest.c:(.text.startup+0xc): undefined reference to `getpass_r'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -39394,7 +39397,7 @@ configure: failed program was:
 configure:37879: result: but still no
 configure:37837: checking for getppid
 configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc8xvjIr.o:conftest.c:(.text.startup+0xc): undefined reference to `getppid'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccgLuJnF.o:conftest.c:(.text.startup+0xc): undefined reference to `getppid'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -39620,7 +39623,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for getppid
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc87JpVy.o:conftest.c:(.text.startup+0xc): undefined reference to `getppid'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccLSScJi.o:conftest.c:(.text.startup+0xc): undefined reference to `getppid'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -39836,7 +39839,7 @@ configure: failed program was:
 configure:37879: result: but still no
 configure:37837: checking for getprotobyname
 configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccQFcqBs.o:conftest.c:(.text.startup+0xc): undefined reference to `getprotobyname'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cciFTCba.o:conftest.c:(.text.startup+0xc): undefined reference to `getprotobyname'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -40062,7 +40065,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for getprotobyname
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccasQQDy.o:conftest.c:(.text.startup+0xc): undefined reference to `getprotobyname'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccwD1Jzv.o:conftest.c:(.text.startup+0xc): undefined reference to `getprotobyname'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -40278,7 +40281,7 @@ configure: failed program was:
 configure:37879: result: but still no
 configure:37837: checking for getpwuid
 configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc6Cnh5r.o:conftest.c:(.text.startup+0xc): undefined reference to `getpwuid'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc2GdYTi.o:conftest.c:(.text.startup+0xc): undefined reference to `getpwuid'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -40504,7 +40507,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for getpwuid
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc87WrVJ.o:conftest.c:(.text.startup+0xc): undefined reference to `getpwuid'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccEZLbdJ.o:conftest.c:(.text.startup+0xc): undefined reference to `getpwuid'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -40720,7 +40723,7 @@ configure: failed program was:
 configure:37879: result: but still no
 configure:37837: checking for getrlimit
 configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccElK9xI.o:conftest.c:(.text.startup+0xc): undefined reference to `getrlimit'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccKlWfhr.o:conftest.c:(.text.startup+0xc): undefined reference to `getrlimit'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -40946,7 +40949,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for getrlimit
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cceooCiK.o:conftest.c:(.text.startup+0xc): undefined reference to `getrlimit'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccI8tr1b.o:conftest.c:(.text.startup+0xc): undefined reference to `getrlimit'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -41166,7 +41169,7 @@ configure:37837: $? = 0
 configure:37837: result: yes
 configure:37837: checking for inet_addr
 configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccgMggz4.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_addr'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccUirxSL.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_addr'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -41393,7 +41396,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for inet_addr
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccsx0tUQ.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_addr'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccYBQlVf.o:conftest.c:(.text.startup+0xc): undefined reference to `inet_addr'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -41614,7 +41617,7 @@ configure:37837: $? = 0
 configure:37837: result: yes
 configure:37837: checking for pipe
 configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccc2wI9T.o:conftest.c:(.text.startup+0xc): undefined reference to `pipe'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccOqE7SI.o:conftest.c:(.text.startup+0xc): undefined reference to `pipe'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -41842,7 +41845,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for pipe
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccsouph5.o:conftest.c:(.text.startup+0xc): undefined reference to `pipe'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccj6FMbi.o:conftest.c:(.text.startup+0xc): undefined reference to `pipe'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -42068,7 +42071,7 @@ configure:37837: $? = 0
 configure:37837: result: yes
 configure:37837: checking for setrlimit
 configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccEEWsST.o:conftest.c:(.text.startup+0xc): undefined reference to `setrlimit'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccMQHn3O.o:conftest.c:(.text.startup+0xc): undefined reference to `setrlimit'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -42298,7 +42301,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for setrlimit
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccQxKaZF.o:conftest.c:(.text.startup+0xc): undefined reference to `setrlimit'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccmc67Tj.o:conftest.c:(.text.startup+0xc): undefined reference to `setrlimit'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -42518,7 +42521,7 @@ configure: failed program was:
 configure:37879: result: but still no
 configure:37837: checking for uname
 configure:37837: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccuodOmZ.o:conftest.c:(.text.startup+0xc): undefined reference to `uname'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccmjiti2.o:conftest.c:(.text.startup+0xc): undefined reference to `uname'
 collect2.exe: error: ld returned 1 exit status
 configure:37837: $? = 1
 configure: failed program was:
@@ -42748,7 +42751,7 @@ configure: failed program was:
 configure:37837: result: no
 configure:37849: checking deeper for uname
 configure:37866: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccO35jvG.o:conftest.c:(.text.startup+0xc): undefined reference to `uname'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc6x2t4s.o:conftest.c:(.text.startup+0xc): undefined reference to `uname'
 collect2.exe: error: ld returned 1 exit status
 configure:37866: $? = 1
 configure: failed program was:
@@ -42978,7 +42981,7 @@ configure:37895: checking for netdb.h
 configure:37895: result: no
 configure:37906: checking for getnameinfo
 configure:37935: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccysdcBp.o:conftest.c:(.text.startup+0xc): undefined reference to `getnameinfo'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc0Cxxd3.o:conftest.c:(.text.startup+0xc): undefined reference to `getnameinfo'
 collect2.exe: error: ld returned 1 exit status
 configure:37935: $? = 1
 configure: failed program was:
@@ -43212,7 +43215,7 @@ configure: failed program was:
 configure:37943: result: no
 configure:37952: checking deeper for getnameinfo
 configure:37969: gcc -o conftest.exe -O2 -Wno-system-headers   conftest.c -lws2_32  >&5
-C:\Users\JAGDEE~1.SID\AppData\Local\Temp\cc8JPK3e.o:conftest.c:(.text.startup+0xc): undefined reference to `getnameinfo'
+C:\Users\JAGDEE~1.SID\AppData\Local\Temp\ccil6fRx.o:conftest.c:(.text.startup+0xc): undefined reference to `getnameinfo'
 collect2.exe: error: ld returned 1 exit status
 configure:37969: $? = 1
 configure: failed program was:
@@ -53794,7 +53797,7 @@ lt_cv_to_tool_file_cmd=func_convert_file_msys_to_w32
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} "/c/newdvc/src/curl/missing" --run aclocal-1.14'
+ACLOCAL='${SHELL} "/c/dvctest/src/curl/missing" --run aclocal-1.14'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
@@ -53805,9 +53808,9 @@ AM_DEFAULT_VERBOSITY='1'
 AM_V='$(V)'
 AR='/c/MinGW/bin/ar'
 AS='as'
-AUTOCONF='${SHELL} "/c/newdvc/src/curl/missing" --run autoconf'
-AUTOHEADER='${SHELL} "/c/newdvc/src/curl/missing" --run autoheader'
-AUTOMAKE='${SHELL} "/c/newdvc/src/curl/missing" --run automake-1.14'
+AUTOCONF='${SHELL} "/c/dvctest/src/curl/missing" --run autoconf'
+AUTOHEADER='${SHELL} "/c/dvctest/src/curl/missing" --run autoheader'
+AUTOMAKE='${SHELL} "/c/dvctest/src/curl/missing" --run automake-1.14'
 AWK='gawk'
 BLANK_AT_MAKETIME=''
 BUILD_LIBHOSTNAME_FALSE=''
@@ -53901,7 +53904,7 @@ LTLIBOBJS=''
 MAINT='#'
 MAINTAINER_MODE_FALSE=''
 MAINTAINER_MODE_TRUE='#'
-MAKEINFO='${SHELL} "/c/newdvc/src/curl/missing" --run makeinfo'
+MAKEINFO='${SHELL} "/c/dvctest/src/curl/missing" --run makeinfo'
 MANIFEST_TOOL=':'
 MANOPT=''
 MKDIR_P='/bin/mkdir -p'
@@ -53996,7 +53999,7 @@ host_vendor='pc'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /c/newdvc/src/curl/install-sh'
+install_sh='${SHELL} /c/dvctest/src/curl/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 libext='a'
