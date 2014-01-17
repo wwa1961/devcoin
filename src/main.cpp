@@ -1196,7 +1196,7 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
         nActualTimespan = nMedianTimespan;
     }
 
-    printf(" nActualTimespan = %"PRI64d" before bounds\n", nActualTimespan);
+  //  printf(" nActualTimespan = %"PRI64d" before bounds\n", nActualTimespan);
 
     if (nActualTimespan < nTargetTimespan/4)
         nActualTimespan = nTargetTimespan/4;
@@ -1219,10 +1219,10 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
         bnNew = bnProofOfWorkLimit;
 
     /// debug print
-    printf("GetNextWorkRequired RETARGET\n");
+    /*printf("GetNextWorkRequired RETARGET\n");
     printf("nTargetTimespan = %"PRI64d" nActualTimespan = %"PRI64d"\n", nTargetTimespan, nActualTimespan);
     printf("Before: %08x %s\n", pindexLast->nBits, CBigNum().SetCompact(pindexLast->nBits).getuint256().ToString().c_str());
-    printf("After: %08x %s\n", bnNew.GetCompact(), bnNew.getuint256().ToString().c_str());
+    printf("After: %08x %s\n", bnNew.GetCompact(), bnNew.getuint256().ToString().c_str());*/
 
     return bnNew.GetCompact();
 }
