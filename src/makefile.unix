@@ -13,7 +13,7 @@ USE_IPV6:=1
 
 LINK:=$(CXX)
 
-DEFS=-D_MT -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE  -D_FILE_OFFSET_BITS=64 -static
+DEFS=-D_MT -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE  -D_FILE_OFFSET_BITS=64
 
 DEFS += $(addprefix -I,$(CURDIR) $(CURDIR)/obj $(BOOST_INCLUDE_PATH) $(BDB_INCLUDE_PATH) $(OPENSSL_INCLUDE_PATH))
 LIBS = $(addprefix -L,$(BOOST_LIB_PATH) $(BDB_LIB_PATH) $(OPENSSL_LIB_PATH))
@@ -164,7 +164,7 @@ DEFS += $(addprefix -I,$(CURDIR)/leveldb/helpers)
 leveldb/libleveldb.a:
 	@echo "Building LevelDB ..." && cd leveldb && $(MAKE) CC=$(CC) CXX=$(CXX) OPT="$(xCXXFLAGS)" libleveldb.a libmemenv.a && cd ..
 curl/lib/.libs/libcurl.a:
-	@echo "Building LibCurl ..." && cd curl && ./configure --disable-shared  --disable-ftp --disable-ldap --disable-ldaps --disable-rtsp --disable-proxy --disable-dict --disable-telnet --disable-tftp --disable-pop3 --disable-imap --disable-smtp  --disable-gopher --disable-manual --disable-imap --disable-zlib --without-ca-bundle --without-gnutls --without-libidn --without-librtmp --without-libssh2 --without-nss --without-ssl --without-zlib && $(MAKE) && cd ..
+	@echo "Building LibCurl ..." && cd curl && ./configure --disable-shared --disable-ftp --disable-ldap --disable-ldaps --disable-rtsp --disable-proxy --disable-dict --disable-telnet --disable-tftp --disable-pop3 --disable-imap --disable-smtp  --disable-gopher --disable-manual --disable-imap --disable-zlib --without-ca-bundle --without-gnutls --without-libidn --without-librtmp --without-libssh2 --without-nss --without-ssl --without-zlib && $(MAKE) && cd ..
 	
 # auto-generated dependencies:
 -include obj/*.P

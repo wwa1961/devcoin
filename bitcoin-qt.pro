@@ -8,7 +8,6 @@ QT += network widgets
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
-CONFIG += static
 
 # for boost 1.37, add -mt to the boost libraries
 # use: qmake BOOST_LIB_SUFFIX=-mt
@@ -26,8 +25,8 @@ BOOST_INCLUDE_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/boost_1_54_0
 BOOST_LIB_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/boost_1_54_0/stage/lib
 BDB_INCLUDE_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/db-4.8.30.NC/build_unix
 BDB_LIB_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.0d/include
-OPENSSL_LIB_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.0d
+OPENSSL_INCLUDE_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.1f/include
+OPENSSL_LIB_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.1f
 MINIUPNPC_INCLUDE_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/
 MINIUPNPC_LIB_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/miniupnpc
 QRENCODE_INCLUDE_PATH=C:/MinGW/msys/1.0/home/jagdeep.sidhu/qrencode-3.4.3
@@ -61,7 +60,7 @@ QMAKE_CXXFLAGS *= -D_FORTIFY_SOURCE=2
 # for extra security on Windows: enable ASLR and DEP via GCC linker flags
 win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat
 # on Windows: enable GCC large address aware linker flag
-win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
+win32:QMAKE_LFLAGS *= -Wl,--large-address-aware
 
 # use: qmake "USE_QRCODE=1"
 # libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support

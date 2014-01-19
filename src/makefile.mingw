@@ -27,7 +27,7 @@ INCLUDEPATHS= \
  -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu" \
  -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu/boost_1_54_0" \
  -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu/db-4.8.30.NC/build_unix" \
- -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.0d/include" \
+ -I"C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.1f/include" \
  -I"C:\dvctest\src\leveldb\include" \
  -I"C:\dvctest\src\curl\include" \
  -I"C:\dvctest\src\leveldb\helpers"
@@ -37,7 +37,7 @@ LIBPATHS= \
  -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/miniupnpc" \
  -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/boost_1_54_0/stage/lib" \
  -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/db-4.8.30.NC/build_unix" \
- -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.0d" \
+ -L"C:/MinGW/msys/1.0/home/jagdeep.sidhu/openssl-1.0.1f" \
  -L"C:\dvctest\src\leveldb" \
  -L"C:\dvctest\src\curl\lib\.libs"
  
@@ -57,7 +57,7 @@ LIBS= \
  -l crypto \
  -l curl
 
-DEFS=-DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE -static
+DEFS=-DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
 DEBUGFLAGS=-g
 CFLAGS=-mthreads -O2 -w -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter $(DEBUGFLAGS) $(DEFS) $(INCLUDEPATHS)
 # enable: ASLR, DEP and large address aware
@@ -131,7 +131,7 @@ DEFS += $(addprefix -I,$(CURDIR)/leveldb/helpers)
 DEFS += $(addprefix -I,$(CURDIR)/curl/include)
 
 curl/lib/.libs/libcurl.a:
-	cd curl && ./configure --disable-shared  --disable-ftp --disable-ldap --disable-ldaps --disable-rtsp --disable-proxy --disable-dict --disable-telnet --disable-tftp --disable-pop3 --disable-imap --disable-smtp  --disable-gopher --disable-manual --disable-imap --disable-zlib --without-ca-bundle --without-gnutls --without-libidn --without-librtmp --without-libssh2 --without-nss --without-ssl --without-zlib && $(MAKE) && cd ..
+	cd curl && ./configure --disable-shared --disable-ftp --disable-ldap --disable-ldaps --disable-rtsp --disable-proxy --disable-dict --disable-telnet --disable-tftp --disable-pop3 --disable-imap --disable-smtp  --disable-gopher --disable-manual --disable-imap --disable-zlib --without-ca-bundle --without-gnutls --without-libidn --without-librtmp --without-libssh2 --without-nss --without-ssl --without-zlib && $(MAKE) && cd ..
 	
 leveldb/libleveldb.a:
 	cd leveldb && $(MAKE) CC=$(CC) CXX=$(CXX) OPT="$(CFLAGS)" TARGET_OS=NATIVE_WINDOWS libleveldb.a libmemenv.a && cd ..
