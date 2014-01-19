@@ -49,6 +49,47 @@ completely stable.
 
 Building
 -------
+QT Build (Statically linked)
+
+Depedencies (you can use later version(s) if you know they are backwards compatible):
+
+-MingW 4.8 
+-Boost 1.54.0 
+-DB 4.8.30 
+-OpenSSL 1.0.0d 
+-QT 5.2.0 
+-Python 2.7 (installed binary) 
+-libcurl 7.33.0 (included in src) 
+-ActivePerl 5.16.3 Build 1603 (64 bit)  (installed binary)
+-Miniupnpc 1.8.20131209 -
+-Qrencode 3.4.3
+-leveldb (included in src)
+
+Follow this quide to build on Windows and also to get idea about how to build dependencies. Also there need to be patches done to certain files (that are already done) but you can confirm, see this link:
+https://bitcointalk.org/index.php?topic=149479.0
+
+Building Boost:
+
+    Same as tutorial
+
+Building DB:
+    ensure you add --enable-static field with configure
+
+Building UPNPC:
+    Same as tutorial
+
+Building Qrencode:
+    Same as tutorial
+    
+Add -static option to LDFLAGS in makefile.mingw to compile a statically linked executable.
+Code:
+
+LDFLAGS=-Wl,--dynamicbase -Wl,--nxcompat -Wl,--large-address-aware -static
+
+Building QT:
+    Same as tutorial 
+
+
 
 The daemon code is in `src/`. To compile and run for win32:
 
