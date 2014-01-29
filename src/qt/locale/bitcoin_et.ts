@@ -2356,8 +2356,8 @@ nt: alertnotify=echo %%s | email -s &quot;Bitcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+11"/>
-        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
-        <translation>Sea &quot;kõrge tähtsusega&quot;/&quot;madala tehingu lisatasuga&quot; tehingute maksimumsuurus baitides (vaikeväärtus: 27000)</translation>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 4000)</source>
+        <translation>Sea &quot;kõrge tähtsusega&quot;/&quot;madala tehingu lisatasuga&quot; tehingute maksimumsuurus baitides (vaikeväärtus: 4000)</translation>
     </message>
     <message>
         <location line="+6"/>

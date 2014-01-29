@@ -2338,7 +2338,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Devcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+11"/>
-        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 4000)</source>
         <translation type="unfinished"/>
     </message>
     <message>
