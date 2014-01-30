@@ -370,7 +370,7 @@ bool CTxOut::IsDust() const
     // need a CTxIn of at least 148 bytes to spend,
     // so dust is a txout less than 54 uBTC
     // (5430 satoshis) with default nMinRelayTxFee
-    return ((nValue*1000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < CTransaction::nMinRelayTxFee);
+    return ((nValue*1000)/(3*((int)GetSerializeSize(SER_DISK,0)+148)) < 10000);
 }
 
 bool CTransaction::IsStandard() const
