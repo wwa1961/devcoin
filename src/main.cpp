@@ -4369,8 +4369,10 @@ CBlockTemplate* CreateNewBlock(CReserveKey& reservekey)
     else
         sharePerAddress = roundint64((int64)share / (int64)coinAddressStrings.size());
 	
+	printf("coinAddressStrings: %d\n", coinAddressStrings.size());
     for (int i=0; i<coinAddressStrings.size(); i++)
     {
+		
      	const std::string coinAddressString = coinAddressStrings[i];
         // Create transaction
         CKeyID addrKeyId;
@@ -4385,8 +4387,19 @@ CBlockTemplate* CreateNewBlock(CReserveKey& reservekey)
 		{
 			txNew.vout[i + 1].scriptPubKey << OP_DUP << OP_HASH160 << addrKeyId << OP_EQUALVERIFY << OP_CHECKSIG;
 			txNew.vout[i + 1].nValue = sharePerAddress;
-			minerValue -= sharePerAddress;
 			
+			minerValue -= sharePerAddress;
+			printf("Address %s valid, value %"PRI64d", minerValue %"PRI64d"\n", coinAddressString.c_str(), txNew.vout[i + 1].nValue, minerValue);
+			
+		}
+		else
+		{
+			printf("Address key invalid for: %s\n", coinAddressString.c_str());
+		}
+		if(txNew.vout[i + 1].nValue < 0)
+		{
+			printf("negative vout value:  %"PRI64d"\n", txNew.vout[i + 1].nValue);
+			txNew.vout[i + 1].nValue = 0;
 		}
     }
 	// END DEVCOIN
@@ -4599,7 +4612,7 @@ CBlockTemplate* CreateNewBlock(CReserveKey& reservekey)
         nLastBlockSize = nBlockSize;
         //pblock->vtx[0].vout[0].nValue = GetBlockValue(pindexPrev->nHeight+1, nFees);
 		// DEVCOIN
-		txNew.vout[0].nValue = minerValue + nFees;
+		pblock->vtx[0].vout[0].nValue = minerValue + nFees;
         pblocktemplate->vTxFees[0] = -nFees;
 		
         // Fill in header
