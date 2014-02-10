@@ -1,0 +1,15 @@
+Format,pluribusunum
+_beginpeers
+http://galaxies.mygamesonline.org/receiver.csv
+http://devcoinpool.btc-music.com/receiver/receiver.csv
+http://devcoinblockexplorer.info/receiver/receiver.csv
+http://devtome.com/files/receiver.csv
+http://devcoin.darkgamex.ch/receiver.csv
+_endpeers
+_begincoins
+msosH2WgG2jcr8u8MqChf6LAyRdcpCAJkd
+mi3btsfaDFYcEQctgCKeRXdZMietg655Yb
+mm9S4VZxKXnVVtGkshYHUHVbDPVg7JHvz9
+msxcdtopxVNhdLEhK5X3qH7CNNh12VxsXz
+msUQv4FDouLNP9UCqXcKBzeoj5exmi1V66
+_endcoins
